@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Restaurant {
+public class RestaurantInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,8 @@ public class Restaurant {
 
     @NotNull
     @Size(max = 65)
-    @Column(name = "name")
-    private String name;
+    @Column(name = "restaurantName")
+    private String restaurantName;
 
     @ManyToOne
     @JoinColumn(name = "addressId", referencedColumnName = "addressId")
@@ -31,7 +31,7 @@ public class Restaurant {
 
     @NotNull
     @Size(max = 10)
-    @Column(name = "phone_number")
+    @Column(name = "phoneNumber")
     private int phoneNumber;
 
 }

@@ -27,8 +27,8 @@ public class Address {
     private String street;
 
     @Size(max = 10)
-    @Column(name = "appartement_number")
-    private int number;
+    @Column(name = "appartementNumber")
+    private int appartementNumber;
 
     @NotNull
     @Size(max = 30)
@@ -37,8 +37,8 @@ public class Address {
 
     @NotNull
     @Size(max = 30)
-    @Column(name = "province_or_state")
-    private String province_or_state;
+    @Column(name = "provinceOrState")
+    private String provinceOrState;
 
     @NotNull
     @Size(max = 30)
@@ -47,6 +47,6 @@ public class Address {
 
     @NotNull
     @Size(max = 10)
-    @Column(name = "postal_or_zip_code")
-    private String postal_or_zip_code;
+    @Column(name = "postalOrZipCode")
+    private String postalOrZipCode;
 }

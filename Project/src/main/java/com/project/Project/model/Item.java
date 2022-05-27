@@ -25,27 +25,27 @@ public class Item {
 
     @NotNull
     @Size(max = 50)
-    @Column(name = "item_name")
+    @Column(name = "itemName")
     private String item_name;
 
     @NotNull
     @Min(0)
     @Max(1000000)
-    @Column(name = "item_price")
+    @Column(name = "itemPrice")
     private BigDecimal item_price;
 
     @NotNull
     @Size(max = 200)
-    @Column(name = "item_description")
-    private String description;
+    @Column(name = "itemDescription")
+    private String itemDescription;
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    @Column(name = "item_type")
-    private Type item_type;
+    @Column(name = "itemType")
+    private Type itemType;
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    @Column(name = "item_size")
-    private FoodSize item_size;
+    @Column(name = "itemSize")
+    private FoodSize itemSize;
 }

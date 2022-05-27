@@ -21,15 +21,15 @@ public class Order {
     private Long orderId;
 
     @NotNull
-    @Column(name = "order_total")
-    private int order_total;
+    @Column(name = "orderTotal")
+    private int orderTotal;
 
     @Temporal(TemporalType.DATE)
-    @Column(name="order_date")
-    private Date order_date;
+    @Column(name="orderDate")
+    private Date orderDate;
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    @Column(name = "order_status")
-    private Status order_status;
+    @Column(name = "orderStatus")
+    private Status orderStatus;
 }
