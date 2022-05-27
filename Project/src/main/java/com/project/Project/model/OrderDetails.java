@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class OrderItems {
+public class OrderDetails {
 
     @Id
     @Column(name = "id")
