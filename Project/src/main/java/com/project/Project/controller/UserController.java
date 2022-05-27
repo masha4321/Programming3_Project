@@ -22,6 +22,18 @@ public class UserController {
         return "index";
     }
 
+    public String contactUs(){
+        return "contactUs";
+    }
+
+    public String login(){
+        return "login";
+    }
+
+    public String menu(){
+        return "menu";
+    }
+
     @PostMapping("/users")
     public User createUser(@Valid @RequestBody User user){
         return userRepository.save(user);
