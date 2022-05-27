@@ -8,7 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "restaurant")
+@Table(name = "restaurantInfo")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,8 +17,9 @@ import javax.validation.constraints.Size;
 public class RestaurantInfo {
 
     @Id
+    @Column(name = "restaurantId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long restaurantId;
 
     @NotNull
     @Size(max = 65)
