@@ -3,25 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Pizza | Profile</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <style>
-         .bg-4 {
-            background-color: #2f2f2f;
-            color: #ffffff;
+      .tableOrders {
+        padding: 80px 500px;
+      }
+      .bg-1 {
+        background-color: #474e5d;
+        color: #555;
+      }
+      .bg-1 h3 {color: #fff;}
+
+      .bg-1 p {color: #fff;}
+
+      .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+      .list-group-item:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+        .bg-4 {
+          background-color: #2f2f2f;
+          color: #ffffff;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
         }
 
     </style>
 </head>
 <body>
 
-<div class="container bg-1">
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="menu">Menu</a></li>
+                <li><a href="contactUs">Contact Us</a></li>
+                <li><a href="shoppingCart"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">UserName
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">My Orders</a></li>
+                        <li><a href="#">Edit Profile</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="bg-1">
     <div>
-        <div class="shadow-lg">
+        <div class="tableOrders">
             <h3 class="text-center">User Profile</h3>
-            <table class="col-12 mx-auto bg-secondary text-light">
+            <table class="list-group-item">
                 <th>User Info</th>
                 <tr>
                     <td>First Name:</td>
@@ -38,13 +104,13 @@
                 <tr>
                     <td>Email:</td>
                 </tr>
+                <tr>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                </tr>
                 </th>
-
             </table>
-            <div>
-                <button class="btn btn-primary">Edit</button>
-            </div>
-            <table class="col-12 mx-auto bg-secondary text-light">
+
+            <table class="list-group-item">
                 <th>Payment Info</th>
                 <tr>
                     <td>Debit Card:</td>
@@ -58,11 +124,11 @@
                 <tr>
                     <td>Crypto:</td>
                 </tr>
+                <tr>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                </tr>
                 </th>
             </table>
-            <div class="col-6 justify-content-center">
-                <button class="btn btn-primary">Edit</button>
-            </div>
         </div>
     </div>
 
