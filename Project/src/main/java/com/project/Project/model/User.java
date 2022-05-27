@@ -7,7 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 @Getter
 @Setter
 @NoArgsConstructor // hibernate requires no-arg constructor
@@ -34,11 +34,6 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "addressId", referencedColumnName = "addressId")
     private Address address;
-
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "paymentMethod")
-    private PaymentMethod paymentMethod;
 
     @NotNull
     @Size(max = 10)
