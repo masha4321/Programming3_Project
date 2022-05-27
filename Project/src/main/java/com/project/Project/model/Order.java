@@ -10,29 +10,26 @@ import java.util.Date;
 @Table(name = "orders")
 @Getter
 @Setter
-@NoArgsConstructor // hibernate requires no-arg constructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Orders {
+public class Order {
 
     @Id
+    @Column(name = "order_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long order_id;
 
     @NotNull
-    @Column(name = "price")
-    private int price;
-
-    @NotNull
-    @Column(name = "quantity")
-    private int quantity;
+    @Column(name = "order_total")
+    private int order_total;
 
     @Temporal(TemporalType.DATE)
-    @Column(name="date")
-    private Date date;
+    @Column(name="order_date")
+    private Date order_date;
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    private Status status;
+    @Column(name = "order_status")
+    private Status order_status;
 }

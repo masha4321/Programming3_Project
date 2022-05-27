@@ -11,25 +11,24 @@ import javax.validation.constraints.Size;
 @Table(name = "address")
 @Getter
 @Setter
-@NoArgsConstructor // hibernate requires no-arg constructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "address_id")
+    private Long address_id;
 
     @NotNull
-    @Size(max = 10)
-    @Column(name = "number")
-    private int number;
-
-    @NotNull
-    @Size(max = 30)
+    @Size(max = 40)
     @Column(name = "street")
     private String street;
+
+    @Size(max = 10)
+    @Column(name = "appartement_number")
+    private int number;
 
     @NotNull
     @Size(max = 30)
@@ -38,11 +37,16 @@ public class Address {
 
     @NotNull
     @Size(max = 30)
-    @Column(name = "province")
-    private String province;
+    @Column(name = "province_or_state")
+    private String province_or_state;
 
     @NotNull
     @Size(max = 30)
     @Column(name = "country")
     private String country;
+
+    @NotNull
+    @Size(max = 10)
+    @Column(name = "postal_or_zip_code")
+    private String postal_or_zip_code;
 }

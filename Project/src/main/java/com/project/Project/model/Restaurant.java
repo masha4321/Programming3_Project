@@ -36,5 +36,5 @@ public class Restaurant {
 
     @OneToMany  //I am sure we are missing more to this annotation, I dont think the Menu is correctly done
     @JoinColumn(name = "menu_id", referencedColumnName = "id")
-    private Menu menu;
+    private Item item;
 }
