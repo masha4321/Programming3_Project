@@ -26,7 +26,7 @@ public class Restaurant {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    @JoinColumn(name = "address_id", referencedColumnName = "address_id")
     private Address address;
 
     @NotNull
@@ -34,7 +34,4 @@ public class Restaurant {
     @Column(name = "phone_number")
     private int phoneNumber;
 
-    @OneToMany  //I am sure we are missing more to this annotation, I dont think the Menu is correctly done
-    @JoinColumn(name = "menu_id", referencedColumnName = "id")
-    private Item item;
 }
