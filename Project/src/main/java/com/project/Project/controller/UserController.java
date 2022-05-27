@@ -19,7 +19,7 @@ public class UserController {
     //TODO: HOME METHOD
     @GetMapping("/")
     public String home(){
-        return "";
+        return "index";
     }
 
     @PostMapping("/users")
