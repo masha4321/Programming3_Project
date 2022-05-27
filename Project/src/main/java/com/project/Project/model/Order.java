@@ -16,9 +16,9 @@ import java.util.Date;
 public class Order {
 
     @Id
-    @Column(name = "order_id")
+    @Column(name = "orderId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long order_id;
+    private Long orderId;
 
     @NotNull
     @Column(name = "order_total")

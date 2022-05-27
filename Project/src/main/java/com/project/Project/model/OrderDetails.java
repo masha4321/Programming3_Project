@@ -18,14 +18,14 @@ public class OrderDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //order_id
+    //orderId
     @ManyToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "order_id")
+    @JoinColumn(name = "orderId", referencedColumnName = "orderId")
     private Order order;
 
-    //item_id
+    //itemId
     @ManyToOne
-    @JoinColumn(name = "item_id", referencedColumnName = "item_id")
+    @JoinColumn(name = "itemId", referencedColumnName = "itemId")
     private Item item;
 
 }

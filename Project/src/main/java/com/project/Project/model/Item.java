@@ -19,9 +19,9 @@ import java.math.BigDecimal;
 public class Item {
 
     @Id
-    @Column(name = "item_id")
+    @Column(name = "itemId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long item_id;
+    private long itemId;
 
     @NotNull
     @Size(max = 50)

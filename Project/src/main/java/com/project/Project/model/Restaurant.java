@@ -26,7 +26,7 @@ public class Restaurant {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "address_id", referencedColumnName = "address_id")
+    @JoinColumn(name = "addressId", referencedColumnName = "addressId")
     private Address address;
 
     @NotNull
