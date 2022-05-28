@@ -18,12 +18,10 @@ public class OrderDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //orderId
     @ManyToOne
     @JoinColumn(name = "orderId", referencedColumnName = "orderId")
     private Order order;
 
-    //itemId
     @ManyToOne
     @JoinColumn(name = "itemId", referencedColumnName = "itemId")
     private Item item;
