@@ -3,6 +3,7 @@ package com.project.Project.controller;
 import com.project.Project.model.User;
 import com.project.Project.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,24 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
+    //TODO: HOME METHOD
+    @GetMapping("/")
+    public String home(){
+        return "index";
+    }
+
+    public String contactUs(){
+        return "contactUs";
+    }
+
+    public String login(){
+        return "login";
+    }
+
+    public String menu(){
+        return "menu";
+    }
 
     @PostMapping("/users")
     public User createUser(@Valid @RequestBody User user){
@@ -29,4 +48,6 @@ public class UserController {
 //            return userRepository.save(user);
 //        }).orElseThrow(() -> new ResourceNotFoundException("UserId " + userId + " not found"));
 //    }
+
+
 }

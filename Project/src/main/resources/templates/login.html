@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Pizza Pizza | Log in</title>
@@ -85,7 +85,7 @@
                     <div style="margin-top:10px" class="form-group">
 
                         <div class="col-sm-12 controls">
-                            <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                            <a id="btn-login" href="#" type="submit" class="btn btn-success" href="@{/userDashboard}">Login</a>
                         </div>
                     </div>
 
@@ -94,7 +94,7 @@
                         <div class="col-md-12 control">
                             <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
                                 Don't have an account!
-                                <a href="/registration">
+                                <a href="@{/registration}">
                                     Sign Up Here
                                 </a>
                             </div>
