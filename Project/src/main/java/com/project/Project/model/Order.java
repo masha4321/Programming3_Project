@@ -31,5 +31,9 @@ public class Order {
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "orderStatus")
-    private Status orderStatus;
+    private OrderStatus orderStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
+    private User user;
 }

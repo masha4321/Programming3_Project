@@ -42,7 +42,7 @@ public class Item {
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "itemType")
-    private Type itemType;
+    private ItemType itemType;
 
     @NotNull
     @Enumerated(EnumType.STRING)

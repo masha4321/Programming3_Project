@@ -1,6 +1,6 @@
 package com.project.Project.model;
 
-public enum Type {
+public enum ItemType {
     APPETIZER,
     MAIN_DISH,
     SIDE_DISH,

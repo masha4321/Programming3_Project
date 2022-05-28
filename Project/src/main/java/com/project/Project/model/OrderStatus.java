@@ -1,6 +1,6 @@
 package com.project.Project.model;
 
-public enum Status {
+public enum OrderStatus {
     GETTING_READY,
     EN_ROUTE,
     DELIVERED
