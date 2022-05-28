@@ -23,14 +23,17 @@ public class UserController {
         return "index";
     }
 
+    @GetMapping("/contactUs")
     public String contactUs(){
         return "contactUs";
     }
 
+    @GetMapping("/login")
     public String login(){
         return "login";
     }
 
+    @GetMapping("/menu")
     public String menu(){
         return "menu";
     }
