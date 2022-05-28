@@ -54,7 +54,7 @@ public class UserController {
 //    }
 
     @GetMapping("/cart")
-    public String cart(){
+    public String shoppingCart(){
         return "shoppingCart";
     }
 }
