@@ -53,5 +53,8 @@ public class UserController {
 //        }).orElseThrow(() -> new ResourceNotFoundException("UserId " + userId + " not found"));
 //    }
 
-
+    @GetMapping("/cart")
+    public String cart(){
+        return "shoppingCart";
+    }
 }
