@@ -62,4 +62,14 @@ public class UserController {
     public String registration(){
         return "registration";
     }
+
+    @GetMapping("/userDashboard")
+    public String userDashboard(){
+        return "userDashboard";
+    }
+
+    @GetMapping("/userProfile")
+    public String userProfile(){
+        return "userProfile";
+    }
 }
