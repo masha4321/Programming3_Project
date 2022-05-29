@@ -30,7 +30,7 @@ public class OrderDetails {
     @JoinColumn(name = "itemId", referencedColumnName = "itemId")
     private Item item;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "itemId", referencedColumnName = "itemId")
     private List<Item> itemList;
 

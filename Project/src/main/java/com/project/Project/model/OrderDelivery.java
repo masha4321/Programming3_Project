@@ -36,7 +36,7 @@ public class OrderDelivery {
     @Column(name = "orderStatus")
     private OrderStatus orderStatus;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "userId", referencedColumnName = "userId")
     private User user;
 

@@ -10,6 +10,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "item")
@@ -53,5 +54,5 @@ public class Item {
 
     @OneToMany
     @JoinColumn(name="orderItem")
-    private OrderDetails orderDetails;
+    private List<OrderDetails> orderDetailsList;
 }
