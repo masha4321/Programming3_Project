@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
 public class Address {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "addressId")
     private Long addressId;
 

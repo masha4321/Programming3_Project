@@ -1,10 +1,9 @@
 package com.project.Project.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import com.project.Project.model.Address;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.project.Project.entity.AddressEO;
-
 @Repository
-public interface AddressRepository extends CrudRepository<AddressEO, Long> {
+public interface AddressRepository extends JpaRepository<Address, Long> {
 }

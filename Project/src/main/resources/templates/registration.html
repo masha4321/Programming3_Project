@@ -64,55 +64,48 @@
             </div>
             <div class="panel-body">
 
-                <form class="form-horizontal" role="form">
+                <form>
                     <div class="form-group">
                         <label class="col-md-3 control-label">First Name</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="first-name" placeholder="Enter First Name">
+                            <input type="text"  class="form-control" name="first-name" placeholder="Enter First Name">
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label class="col-md-3 control-label">Last Name</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="last-name" placeholder="Enter Last Name">
+                            <input type="text"  class="form-control" name="last-name" placeholder="Enter Last Name">
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label class="col-md-3 control-label">Email</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="email" placeholder="Enter Email">
+                            <input type="text"  class="form-control"  placeholder="Enter Email">
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label class="col-md-3 control-label">Phone Number</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="phone" placeholder="Enter Phone Number">
+                            <input type="text" class="form-control" placeholder="Enter Phone Number">
                         </div>
                     </div>
-
-                    <div class="form-group">
+                    <!--<div class="form-group">
                         <label class="col-md-3 control-label">Password</label>
                         <div class="col-md-9">
-                            <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                            <input type="password" class="form-control" placeholder="Enter Password">
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label class="col-md-3 control-label">Confirm Password</label>
                         <div class="col-md-9">
-                            <input type="password" class="form-control" name="confirm-password" placeholder="Confirm Password">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
                         </div>
-                    </div>
-
+                    </div>-->
                     <div class="form-group">
                         <div class="col-md-offset-3 col-md-9">
                             <a id="btn-signup" type="submit" class="btn btn-info">Sign Up</a>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="col-md-12 control">
                             <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
@@ -123,55 +116,6 @@
                             </div>
                         </div>
                     </div>
-                </form>
-
-                <p><em>Address can be saved into db, need to save user info as well now</em></p>
-
-                <form th:action="@{/saveAddress}" th:object="${address}" method="post">
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Street</label>
-                        <div class="col-md-9">
-                            <input type="text" th:field="*{street}" class="form-control"  placeholder="Street">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Civic number</label>
-                        <div class="col-md-9">
-                            <input type="number"  th:field="*{appartementNumber}" class="form-control"  placeholder="Civic number">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">City</label>
-                        <div class="col-md-9">
-                            <input type="text"  th:field="*{city}" class="form-control"  placeholder="City">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Province/State</label>
-                        <div class="col-md-9">
-                            <input type="text"  th:field="*{provinceOrState}" class="form-control"  placeholder="Province/State">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Country</label>
-                        <div class="col-md-9">
-                            <input type="text"  th:field="*{country}" class="form-control"  placeholder="Country">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Postal/Zip code</label>
-                        <div class="col-md-9">
-                            <input type="text"  th:field="*{postalOrZipCode}" class="form-control"  placeholder="Postal/Zip code">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-info col-2">Submit</button>
                 </form>
 
             </div>
