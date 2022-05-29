@@ -1,10 +1,13 @@
 package com.project.Project.model;
 
+import com.project.Project.model.constants.OrderStatus;
 import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "orderDelivery")
@@ -22,7 +25,7 @@ public class OrderDelivery {
 
     @NotNull
     @Column(name = "orderTotal")
-    private int orderTotal;
+    private BigDecimal orderTotal;
 
     @Temporal(TemporalType.DATE)
     @Column(name="orderDate")
@@ -32,5 +35,12 @@ public class OrderDelivery {
     @Enumerated(EnumType.STRING)
     @Column(name = "orderStatus")
     private OrderStatus orderStatus;
+
+    @ManyToOne
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
+    private User user;
+
+    @OneToMany
+    private List<OrderDetails> OrderDetailsList;
 
 }

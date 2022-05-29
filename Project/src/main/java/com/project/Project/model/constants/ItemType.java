@@ -1,4 +1,4 @@
-package com.project.Project.model;
+package com.project.Project.model.constants;
 
 public enum ItemType {
     APPETIZER,

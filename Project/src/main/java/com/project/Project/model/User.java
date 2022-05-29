@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -42,6 +43,13 @@ public class User {
 
 
     private String password;
+
+    @OneToOne
+    private OrderDelivery orderDelivery;
+
+    //Could this be a One to One relationship instead?
+    @OneToMany
+    private List<OrderDelivery> orderDeliveryList;
 
 
 }

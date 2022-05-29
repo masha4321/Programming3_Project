@@ -1,5 +1,7 @@
 package com.project.Project.model;
 
+import com.project.Project.model.constants.FoodSize;
+import com.project.Project.model.constants.ItemType;
 import com.sun.istack.NotNull;
 import lombok.*;
 
@@ -26,13 +28,13 @@ public class Item {
     @NotNull
     @Size(max = 50)
     @Column(name = "itemName")
-    private String item_name;
+    private String itemName;
 
     @NotNull
     @Min(0)
     @Max(1000000)
     @Column(name = "itemPrice")
-    private BigDecimal item_price;
+    private double itemPrice;
 
     @NotNull
     @Size(max = 200)
@@ -48,4 +50,8 @@ public class Item {
     @Enumerated(EnumType.STRING)
     @Column(name = "itemSize")
     private FoodSize itemSize;
+
+    @OneToMany
+    @JoinColumn(name="orderItem")
+    private OrderDetails orderDetails;
 }

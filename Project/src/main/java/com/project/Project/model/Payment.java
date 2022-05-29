@@ -1,5 +1,6 @@
 package com.project.Project.model;
 
+import com.project.Project.model.constants.PaymentType;
 import com.sun.istack.NotNull;
 import lombok.*;
 
