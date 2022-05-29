@@ -58,11 +58,6 @@ public class UserController {
         return "shoppingCart";
     }
 
-    @GetMapping("/registration")
-    public String registration(){
-        return "registration";
-    }
-
     @GetMapping("/userDashboard")
     public String userDashboard(){
         return "userDashboard";
