@@ -36,4 +36,9 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "userId", referencedColumnName = "userId")
     private User user;
+
+    @OneToOne
+    @JoinColumn(name = "orderDetailsId", referencedColumnName = "orderDetailsId")
+    private OrderDetails orderDetails;
+
 }
