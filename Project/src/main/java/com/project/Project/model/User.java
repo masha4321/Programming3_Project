@@ -41,4 +41,7 @@ public class User {
     private int phoneNumber;
 
 
+    private String password;
+
+
 }
