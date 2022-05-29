@@ -1,15 +1,8 @@
 package com.project.Project.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.project.Project.entity.AddressEO;
-import com.project.Project.entity.UserEO;
-import com.project.Project.model.Address;
-import com.project.Project.model.User;
-import com.project.Project.repository.AddressRepository;
 import com.project.Project.repository.UserRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserService {
