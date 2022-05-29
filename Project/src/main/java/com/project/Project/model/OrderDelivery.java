@@ -7,18 +7,18 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orderDelivery")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Order {
+public class OrderDelivery {
 
     @Id
     @Column(name = "orderId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long orderId;
+    private long orderId;
 
     @NotNull
     @Column(name = "orderTotal")
@@ -32,13 +32,5 @@ public class Order {
     @Enumerated(EnumType.STRING)
     @Column(name = "orderStatus")
     private OrderStatus orderStatus;
-
-    @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
-    private User user;
-
-    @OneToOne
-    @JoinColumn(name = "orderDetailsId", referencedColumnName = "orderDetailsId")
-    private OrderDetails orderDetails;
 
 }

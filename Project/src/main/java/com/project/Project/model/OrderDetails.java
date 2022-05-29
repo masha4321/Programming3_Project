@@ -20,7 +20,7 @@ public class OrderDetails {
 
     @ManyToOne
     @JoinColumn(name = "orderId", referencedColumnName = "orderId")
-    private Order order;
+    private OrderDelivery order;
 
     @ManyToOne
     @JoinColumn(name = "itemId", referencedColumnName = "itemId")
